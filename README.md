@@ -188,23 +188,6 @@ autohand mcp add shadcn bunx -y @jpisnice/shadcn-ui-mcp-server --github-api-key 
 
 Add `--scope project` before `shadcn` to save the server in the current project's `.autohand` configuration instead of your user configuration.
 
-## 💻 Cursor, Codex, and Gemini CLI with agent-add
-
-[agent-add](https://github.com/pea3nut/agent-add) writes an MCP definition to the
-selected client's configuration format. From a checkout of this repository,
-reuse the published-package definition in [`.mcp.json`](.mcp.json):
-
-```bash
-npx -y agent-add@1.3.1 --host cursor --mcp ./.mcp.json
-```
-
-Node.js 18+ is required. Use `--host codex` or `--host gemini` for those clients.
-The default scope is the current project; add `--global` for user scope. To use
-another project, copy `.mcp.json` there and run the command from that directory.
-This definition uses `npx` to launch the published server; a local build is not
-required. Restart your client and verify that it connects. Registration alone
-does not test GitHub API access or rate limits.
-
 ## 💻 Claude Code Integration
 
 ### Quick Add (CLI)
@@ -231,6 +214,14 @@ claude mcp add --scope user --transport http shadcn-mcp-server http://localhost:
 See [Claude Code Integration Guide](docs/integration/claude-code.md) for framework-specific commands (React, Svelte, Vue, React Native).
 
 > **Reference:** [Claude Code MCP Documentation](https://code.claude.com/docs/en/mcp)
+
+## 💻 Other AI Agent Integration
+
+Use [Agent Add](https://github.com/pea3nut/agent-add) to install the existing MCP configuration, then select your client:
+
+```bash
+npx -y agent-add --mcp https://raw.githubusercontent.com/Jpisnice/shadcn-ui-mcp-server/master/.mcp.json
+```
 
 ## 🎯 Use Cases
 
