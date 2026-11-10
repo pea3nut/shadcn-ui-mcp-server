@@ -220,7 +220,7 @@ See [Claude Code Integration Guide](docs/integration/claude-code.md) for framewo
 Use [Agent Add](https://github.com/pea3nut/agent-add) to install the existing MCP configuration, then select your client:
 
 ```bash
-npx -y agent-add --mcp https://raw.githubusercontent.com/Jpisnice/shadcn-ui-mcp-server/master/.mcp.json
+npx -y agent-add --global --mcp https://raw.githubusercontent.com/Jpisnice/shadcn-ui-mcp-server/master/.mcp.json
 ```
 
 ## 🎯 Use Cases
